@@ -1,59 +1,77 @@
-<!-- As a link -->
-<html lang='ja'>
-<head>
-    <meta charset="UTF-8">
-    <title> TechHub </title>
-</head>
+{% extends 'base.html' %}
 
+{% load static %}
 
-<body>
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <a class="navbar-brand" href="#">TechHub</a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
+{% block title %} A webpage for school laboratory technicians in Japan | TechHub {% endblock %}
 
-  <div class="collapse navbar-collapse" id="navbarSupportedContent">
-    <ul class="navbar-nav mr-auto">
-      <li class="nav-item active">
-        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">Link</a>
-      </li>
-      <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          Dropdown
-        </a>
-        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item" href="#">Action</a>
-          <a class="dropdown-item" href="#">Another action</a>
-          <div class="dropdown-divider"></div>
-          <a class="dropdown-item" href="#">Something else here</a>
+{% block header %}
+
+<header class="masthead text-center text-white">
+    <div class="masthead-content">
+        <div class="container">
+            <h1 class="masthead-heading mb-0"> TechHub</h1>
+            <h2 class="masthead-subheading mb-0"> For lab technician professionals in Japan </h2>
+            <a href="#" class="btn btn-primary btn-xl rounded-pill mt-5">Log In</a>
         </div>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link disabled" href="#">Disabled</a>
-      </li>
-    </ul>
-    <form class="form-inline my-2 my-lg-0">
-      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-    </form>
-  </div>
-</nav>
-    <h1>WELCOME TO TechHub </h1>
-    <h2> For all things tech in Japan! </h2>
-    <p> This is a forum for laboratory technicans to connect in Japan!  Based on the location of the web founder, this will be related to information
-    resources, and tips/tricks and other useful tidbits for those doing most amazing (some say, the busiest) job in the world!  Please reach out and
-    connect with others and please do it responsibly and safely.  If you have any issues on how to behave online, then my only advice for you is not
-    to do it here (or anywhere!).
-    </p>
-    <p> Please use our forum and share tips and tricks. Nothing here is vetted by Zeus (or any other immortal), so ensure that you include necessary
-    safety information, resources, hazcards etc etc.
-    </p>
-    <p> Sign up and spread the word!  When the web master started this job, there was nothing but word-of-mouth and shadowing your senpai! Information
-    sharing is invaluable for techs and it is nice to meet others doing the same fantastic work!
-    </p>
-</body>
-</html>
+    </div>
+    <div class="bg-circle-1 bg-circle"></div>
+    <div class="bg-circle-2 bg-circle"></div>
+    <div class="bg-circle-3 bg-circle"></div>
+    <div class="bg-circle-4 bg-circle"></div>
+</header>
+{% endblock %}
+{% block contents %}
+<section>
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-6 order-lg-2">
+                <div class="p-5">
+                    <img class="img-fluid rounded-circle" src="{% static 'assets/img/img01.jpg' %}" alt="">
+                </div>
+            </div>
+            <div class="col-lg-6 order-lg-1">
+                <div class="p-5">
+                    <h2 class="display-4">Forum</h2>
+                    <p> Get connected and unleash the Technician Network!</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section>
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-6">
+                <div class="p-5">
+                    <img class="img-fluid rounded-circle" src="{% static 'assets/img/img02.jpg' %}" alt="">
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="p-5">
+                    <h2 class="display-4">Japanese Chemical Regulations</h2>
+                    <p> What can't I have?  What can I have?</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section>
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-6 order-lg-2">
+                <div class="p-5">
+                    <img class="img-fluid rounded-circle" src="{% static 'assets/img/img03.jpg' %}" alt="">
+                </div>
+            </div>
+            <div class="col-lg-6 order-lg-1">
+                <div class="p-5">
+                    <h2 class="display-4">Resources and Articles</h2>
+                    <p> Short Tidbits and Long Thinkers</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}
