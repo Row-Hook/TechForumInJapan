@@ -5512,6 +5512,11 @@ textarea.form-control-lg {
     height: 100%;
     margin: 0;
   }
+
+  .my-div-style {
+    margin-top: 6rem;
+  }
+
   .modal-fullscreen-xxl-down .modal-content {
     height: 100%;
     border: 0;
