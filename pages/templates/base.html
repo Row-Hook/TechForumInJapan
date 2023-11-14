@@ -41,14 +41,29 @@
                             <a class="nav-link {% block activate_inquiry %}{% endblock %}"
                                href="{% url 'pages:inquiry' %}">Inquiry</a>
                         </li>
+                        {% if user.is_authenticated %}
+                        <li class="nav_item">
+                            <a class="nav-link {% block active_pages_list %}{% endblock %}"
+                            href="{% url 'pages:pages_list'%}">Pages List</a>
+                        </li>
+                        {% endif %}
                     </ul>
                     <ul class="navbar-nav ms-auto">
+                        {% if user.is_authenticated %}
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Sign Up</a>
+                            <a class="nav-link" href="{% url 'account_logout' %}">Log Out</a>
+                        </li>
+                        {% else %}
+                        <li class="nav-item">
+                            <a class="nav-link {% block active_signup %}{% endblock %}" href="{% url 'account_signup' %}">Sign Up</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Log In</a>
+                            <a class="nav-link" href="{% url 'account_logout' %}">Log Out</a>
                         </li>
+                        <li class="nav-item">
+                            <a class="nav-link {% block active_login %}{% endblock %}" href="{% url 'account_login' %}">Log In</a>
+                        </li>
+                        {% endif %}
                     </ul>
                 </div>
             </div>

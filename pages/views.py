@@ -8,6 +8,10 @@ from .forms import InquiryForm
 
 from django.contrib import messages
 
+from django.contrib.auth.mixins import LoginRequiredMixin
+
+from .models import Pages
+
 logger = logging.getLogger(__name__)
 
 class IndexView(generic.TemplateView):
@@ -23,4 +27,13 @@ class InquiryView(generic.FormView):
         messages.success(self.request, 'メッセージを送信しました。')
         logger.info('Inquiry sent by {}'.format(form.cleaned_data['name']))
         return super().form_valid(form)
+
+class PagesListView(LoginRequiredMixin, generic.ListView):
+    model = Pages
+    template_name = 'pages_list.html'
+
+    def get_queryset(self):
+        pages = Pages.objects.filter(user=self.request.user).order_by('-created_at')
+        return pages
+
 
