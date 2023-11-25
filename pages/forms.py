@@ -2,7 +2,7 @@ import os
 
 from django import forms
 from django.core.mail import EmailMessage
-form .models import Pages
+from .models import Pages
 
 
 class InquiryForm(forms.Form):

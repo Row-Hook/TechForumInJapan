@@ -18,7 +18,7 @@ class Pages(models.Model):
     created_at = models.DateTimeField(verbose_name='作成日時',
                                      auto_now_add=True)
     updated_at = models.DateTimeField(verbose_name='更新日時',
-                                      auto_now_add=True)
+                                      auto_now=True)
 
     class Meta:
         verbose_name_plural = 'Pages'

@@ -1,7 +1,7 @@
 {% extends 'base.html' %}
 {% load static %}
 
-{% block title %}ページ更新 | TechHub{% endblock %}
+{% block title %}Update Pages | TechHub{% endblock %}
 
 {% block active_diary_list %}active{% endblock %}
 
@@ -13,8 +13,8 @@
             <table class="table">
                 {{ form.as_table }}
             </table>
-            <button class="btn btn_primary" type="submit">更新</button>
-            <a class="btn btn-secondary ml-2" href="{% url 'pages:pages_detail' object.pk %}">キャンセル</a>
+            <button class="btn btn_primary" type="submit">Update</button>
+            <a class="btn btn-secondary ml-2" href="{% url 'pages:pages_detail' object.pk %}">Cancel</a>
         </form>
     </div>
 </div>
